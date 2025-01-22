@@ -1,0 +1,30 @@
+Finite State Machine for Animation:
+A finite state machine is a concept that manages states and transitions between them with rules dictating when a state chance can occur
+
+ ☐ Create a state (data point)
+ A state is just a class with methods
+   ☐ **Enter**
+     ☐ Play animation
+   ☐ **Exit**
+     ☐ Do nothing
+   ☐ **Update** methods
+     ☐ Check for inputs
+   Also a 
+   ☐ **Signal** that is triggered on change of state.
+
+
+
+ ☐ Create a FiniteStateMachine class
+   ☐ Make a way to track each state (Dict, List, Enums)
+   (Here, one way described is to create child nodes under the FSM node and iterate through them, creating a dictionary with each child's name as the key. This makes it easier to use export variables)
+   ☐ Iniitalise the structure in the `_on_ready` function
+   ☐ Set initial state (Use export variable)
+   ☐ Setup the change_state function by exiting the older state and entering the `newstate.Enter()` function
+   ☐ Run the current state's `Update()` function till we change states
+ ☐ Transition Manager
+   ☐ Centralised
+     ☐ Self Transitions require a larger logic base
+   ☐ Decentralised
+     ☐ Manager decides when to switch
+     ☐ Enemy is triggered
+     
