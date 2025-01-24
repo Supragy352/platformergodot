@@ -1,6 +1,6 @@
-[gd_scene load_steps=176 format=3 uid="uid://687jl14k6dqt"]
+[gd_scene load_steps=175 format=3 uid="uid://687jl14k6dqt"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_lj5j4"]
+[ext_resource type="Script" path="res://player.gd" id="1_a46g6"]
 [ext_resource type="Texture2D" uid="uid://cwm6355g3lsqr" path="res://assets/_Idle.png" id="2_d6mht"]
 [ext_resource type="Texture2D" uid="uid://4wm0xl62vsf1" path="res://assets/_Attack.png" id="2_jaj8u"]
 [ext_resource type="Texture2D" uid="uid://c2tg2iw3tftdx" path="res://assets/_Attack2.png" id="3_o5lwx"]
@@ -30,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://cn2ypsdrrbdw0" path="res://assets/_WallClimbNoMovement.png" id="28_8l5us"]
 [ext_resource type="Texture2D" uid="uid://b1q2tc3wh37ja" path="res://assets/_WallHang.png" id="29_xt7gc"]
 [ext_resource type="Texture2D" uid="uid://1tmf5bj3gesv" path="res://assets/_WallSlide.png" id="30_igmm4"]
-[ext_resource type="Script" path="res://player_state.gd" id="31_enwv8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xvyu4"]
 atlas = ExtResource("2_jaj8u")
@@ -1178,11 +1177,11 @@ animations = [{
 radius = 5.84348
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_lj5j4")
+script = ExtResource("1_a46g6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(593, 156)
+position = Vector2(21, -86)
 scale = Vector2(4.79167, 3.79167)
 sprite_frames = SubResource("SpriteFrames_k6gg3")
 animation = &"Idle"
@@ -1193,7 +1192,3 @@ visible = false
 position = Vector2(571, 243)
 scale = Vector2(4.79167, 3.79167)
 shape = SubResource("CapsuleShape2D_cf0l7")
-
-[node name="FSM" type="Node" parent="." node_paths=PackedStringArray("sprite")]
-script = ExtResource("31_enwv8")
-sprite = NodePath("../AnimatedSprite2D")

@@ -1,3 +1,21 @@
+Platformer Movements:
+  Define Character Movement Variables
+  ☐ Set up variables for **acceleration** (how quickly speed increases), **deceleration** (how quickly speed decreases when no input is given), **max_speed** (the     highest speed the character can reach), **velocity** (current speed and direction)
+  ☐ Handle Input for Acceleration
+    Check for player input (left or right).
+  Gradually increase the velocity by adding acceleration, ensuring it does not exceed max speed.
+  ☐ Apply Deceleration When No Input
+  If no movement input is detected, reduce velocity gradually using deceleration.
+  Stop the character completely when the velocity is close to zero to prevent sliding.
+  ☐ Clamp Velocity to Max Speed
+  Ensure the velocity does not exceed the max speed in either direction.
+  This prevents the character from moving too fast.
+  ☐ Apply Velocity to Character
+  Use Godot’s movement functions (e.g., move_and_slide()) to apply the velocity to the character.
+  ☐ Consider Friction and Air Control
+  If the character is on the ground, apply full acceleration and deceleration.
+  If in the air, adjust the acceleration and deceleration to allow some control but not as much as on the ground.
+
 Finite State Machine for Animation:
 A finite state machine is a concept that manages states and transitions between them with rules dictating when a state chance can occur
 

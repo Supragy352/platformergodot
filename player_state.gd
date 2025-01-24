@@ -12,4 +12,4 @@ func Exit():
 	pass
 
 func Update(_delta:float):
-	if Input.get_vector(
+	pass
